@@ -92,7 +92,7 @@ select {
     -moz-appearance: none;
     border: 0;
     font-size: 12px;
-    background-color: #000000;
+    background-color: #fff;
     cursor: pointer;
     font-weight: 500;
 }
