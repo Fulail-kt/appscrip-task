@@ -84,6 +84,11 @@
     padding: 25px 0;
     width: 50%;
 }
+.contactData{
+    display:flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
 .topFooter-right .details{
     background: #000;
     display: flex;
