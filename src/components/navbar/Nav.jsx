@@ -4,7 +4,7 @@ import Styles from "./style.css";
 import { navbarHeadings } from "@/constants/constants";
 import Link from "next/link";
 
-const LowerNav = () => {
+const Nav = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     return (
         <div className="outerNav">
@@ -186,4 +186,4 @@ const LowerNav = () => {
     );
 };
 
-export default LowerNav;
+export default Nav;

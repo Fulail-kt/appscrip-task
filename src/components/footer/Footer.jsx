@@ -34,28 +34,43 @@ const Footer = () => {
           </div>
           <div className="bottomFooter">
             <div className="bottomFooter-firstOne">
-                <h1>mettā muse</h1>
+                <div className="headingText">
+                    <h1>mettā muse</h1>
+                <div className="downArrow"><span> <Image src={png.arrow}/></span></div>
+
+                </div>
                 <ul>
                 {footerNavMeta.map((link,index)=>(
                         <li key={index}>{link?.title}</li>
                     ))}
                 </ul>
             </div>
+
             <div className="bottomFooter-secondOne">
-                <h1>QUICK LINKS</h1>
+                <div className="headingText">
+                    <h1>QUICK LINKS</h1>
+                    <div className="downArrow"><span> <Image src={png.arrow}/></span></div>
+                </div>
                 <ul>
                     {footerNavQuick.map((link,index)=>(
                         <li key={index}>{link?.title}</li>
                     ))}
                 </ul>
+               
             </div>
             <div className="bottomFooter-thirdOne">
                 <div className="subDiv">
+                <div className="headingText">
                     <h1>FOLLOW US</h1>
-                    <div className="socialMedia"> <Image src={png?.insta}/> <Image src={png?.linkedin}/> </div>
+                    <div className="downArrow"><span> <Image src={png.arrow}/></span></div>
+                </div>
+                    <div className="socialMedia"> <Image src={png?.insta} width={30} height={30}/> <Image src={png?.linkedin} width={30} height={30}/> </div>
+                    
                 </div>
                 <div className="subDiv">
-                <h1>mettā muse Accepts</h1>
+              
+                    <h1>mettā muse Accepts</h1>
+                  
                 <div> <Image src={png?.pay1}/> <Image src={png?.pay2}/> <Image src={png?.pay3}/> <Image src={png?.pay4}/> <Image src={png?.pay5}/> <Image src={png?.pay6}/> </div>
                 </div>
             </div>

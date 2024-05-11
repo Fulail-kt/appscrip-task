@@ -105,10 +105,6 @@ background: white;
 border: none;
 }
 
-/* overflow: "hidden",
-textOverflow: "ellipsis",
-width: "280px",
-color:' #888792' */
 
 .productActions {
     display: flex;
@@ -178,4 +174,47 @@ color:' #888792' */
   .gradientBlur {
     background: rgb(199, 198, 84);
     background: radial-gradient(circle, rgba(199, 198, 84, 0.7372198879551821) 0%, rgba(252, 70, 107, 0) 100%);
+  }
+
+  @media screen and (max-width: 750px) {
+
+    .productTitle {
+      margin: 0;
+      font-size: 15px;
+      font-weight: bold;
+      width: 180px; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+  
+  }
+
+    .productCard {
+      width: 180px;
+    
+      border-radius: 8px;
+      /* overflow: hidden; */
+      transition: transform 0.3s ease;
+  }
+  
+  .productDetails {
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 240px;
+
+}
+
+
+.productDescription {
+  font-weight: 100;
+  line-height: 16px;
+  text-align: left;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  }
   }

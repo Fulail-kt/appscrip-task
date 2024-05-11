@@ -34,6 +34,7 @@ export const footerNavMeta = [
     { title: "Contact Us", link: "#" },
     { title: "EU Compliances Docs", link: "#" }
 ];
+
 export const footerNavQuick = [
     { title: "Order & Shipping", link: "#" },
     { title: "Join/Login as a Seller", link: "#" },
@@ -44,5 +45,23 @@ export const footerNavQuick = [
     { title: "Terms & Conditions", link: "#" }
 ];
 
+export const Recommended=[
+    {title:'RECOMMENDED'},
+    {title:'NEWEST FIRST'},
+    {title:'POPULAR'},
+    {title:'PRICE : HIGH TO LOW'},
+    {title:'PRICE : LOW TO HIGH'},
+]
+
+export const filters = [
+    { title: "IDEAL FOR", options: ["Men", "Women", "Baby & Kids"] },
+    { title: "OCCASION", options: ["Casual", "Formal", "Party"] },
+    { title: "WORK", options: ["Office", "Outdoor", "Indoor"] },
+    { title: "FABRIC", options: ["Cotton", "Polyester", "Wool"] },
+    { title: "SEGMENT", options: ["High-End", "Mid-Range", "Budget"] },
+    { title: "SUITABLE FOR", options: ["Summer", "Winter", "All Seasons"] },
+    { title: "SIZE", options: ["Small", "Medium", "Large"] },
+    { title: "COLOR", options: ["Red", "Blue", "Green"] },
+];
 
 

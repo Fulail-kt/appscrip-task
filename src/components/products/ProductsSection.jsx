@@ -1,15 +1,18 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Style from "./style.css";
-import ProductCard from "../ui/ProductCard";
-import Filter from "../ui/filter";
-import Spinner from "../ui/Spinner";
+import ProductCard from "../ui.elements/ProductCard";
+import Filter from "../ui.elements/filter";
+import { Recommended,filters } from "@/constants/constants";
+import Spinner from "../ui.elements/Spinner";
 
 const ProductsSection = () => {
     const [showFilter, setShowFilter] = useState(false);
     const [showRecommend, setShowRecommend] = useState(false);
     const [itemCount, setItemCount] = useState('block');
     const [products, setProducts] = useState();
+
+
     useEffect(() => {
         (async () => {
             const response = await fetch("https://fakestoreapi.com/products");
@@ -71,25 +74,7 @@ const ProductsSection = () => {
         setShowRecommend(!showRecommend)
     }
 
-    const Recommended=[
-        {title:'RECOMMENDED'},
-        {title:'NEWEST FIRST'},
-        {title:'POPULAR'},
-        {title:'PRICE : HIGH TO LOW'},
-        {title:'PRICE : LOW TO HIGH'},
-    ]
-
-    const filters = [
-        { title: "IDEAL FOR", options: ["Men", "Women", "Baby & Kids"] },
-        { title: "OCCASION", options: ["Casual", "Formal", "Party"] },
-        { title: "WORK", options: ["Office", "Outdoor", "Indoor"] },
-        { title: "FABRIC", options: ["Cotton", "Polyester", "Wool"] },
-        { title: "SEGMENT", options: ["High-End", "Mid-Range", "Budget"] },
-        { title: "SUITABLE FOR", options: ["Summer", "Winter", "All Seasons"] },
-        { title: "SIZE", options: ["Small", "Medium", "Large"] },
-        { title: "COLOR", options: ["Red", "Blue", "Green"] },
-    ];
-
+   
 
    
     return (
@@ -136,7 +121,9 @@ const ProductsSection = () => {
                    <div className="recommended" >
                         <ul>
                             {Recommended.map((link,index)=>(
-                                <li key={index}>{link.title}</li>
+                               <li style={{ fontWeight: index === 0? 'bold' : 'normal' }} key={index}>
+                            {link.title}
+                           </li>
                             ))}
                         </ul>
                     </div>:""}

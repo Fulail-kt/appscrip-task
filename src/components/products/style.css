@@ -77,10 +77,13 @@
     display: block;
 }
 
+.filter-section{
+    width: 100%;
+}
 
 
 .right-section {
-    padding: 20px;
+    padding: 10px;
     padding-left: 10px;
     gap: 20px;
     display: flex;
@@ -104,6 +107,13 @@
 }
 
 @media screen and (max-width: 750px) {
+
+    .product-section {
+        display: grid;
+        place-items: center;
+        gap: 10px;
+    }
+
 .header-section {
     display: flex;
     justify-content: space-evenly;
