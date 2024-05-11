@@ -92,7 +92,7 @@ select {
     -moz-appearance: none;
     border: 0;
     font-size: 12px;
-    background-color: #fff;
+    background-color: #000000;
     cursor: pointer;
     font-weight: 500;
 }
@@ -137,14 +137,14 @@ select::after {
 }
 
 .sideBar {
-    background-color: rgba(103, 99, 99, 0.9); 
+    background-color: rgba(255, 255, 255, 0.842); 
     height: 100vh;
     width: 300px;
     position: fixed;
     top: 0;
     transition: left 0.3s ease; 
     z-index: 999; 
-    backdrop-filter: blur(5px); 
+    backdrop-filter: blur(2px); 
 }
 
 .sideBar.open {
@@ -152,19 +152,21 @@ select::after {
 }
 
 .sideBar ul {
+    
     list-style-type: none; 
     padding: 0; 
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .sideBar li {
     padding: 15px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 18px;
 }
 
 .sideBar li:hover {
-    background-color: #676767;
+    background-color: #181818;
+    color: white;
     cursor: pointer;
 }
 
@@ -172,10 +174,10 @@ select::after {
     position: absolute;
     top: 20px;
     right: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     font-size: 24px;
-    z-index: 1000; /* Ensure icon is above sidebar content */
+    z-index: 1000;
 }
 
 

@@ -149,9 +149,9 @@ const Nav = () => {
                             />
                         </svg>
 
-                        <select id="cars">
-                            <option value="volvo">ENG</option>
-                            <option value="saab">MAL</option>
+                        <select id="Languague">
+                            <option value="Eng">ENG</option>
+                            <option value="Mal">MAL</option>
                         </select>
                     </span>
                 </div>
