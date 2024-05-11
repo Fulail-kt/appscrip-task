@@ -27,6 +27,7 @@ const ProductsSection = () => {
         const handleResize = () => {
             let newGrid = 'repeat(4, 1fr)';
             if (window.innerWidth < 768) {
+                setItemCount('none')
                 newGrid = 'repeat(2, 1fr)';
             } else if (window.innerWidth < 1024) {
                 setItemCount('none')
