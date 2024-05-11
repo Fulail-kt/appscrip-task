@@ -19,6 +19,37 @@ h4 {
     margin: 0;
 }
 
+.productCard.skeleton {
+  background-color: #f0f0f0;
+}
+
+.productImage.skeleton {
+  width: 100%;
+  height: 200px; /* Adjust height based on actual image aspect ratio */
+}
+
+
+
+.productTitle.skeleton,
+.productDescription.skeleton {
+  background-color: #e0e0e0;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.productDescription.skeleton {
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton-line {
+  background-color: #d0d0d0;
+  height: 10px;
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+
 .filter label {
     font-size: 16px;
     font-weight: 400;

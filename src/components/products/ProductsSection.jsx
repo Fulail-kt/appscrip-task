@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Style from "./style.css";
 import ProductCard from "../ui.elements/ProductCard";
 import Filter from "../ui.elements/filter";
-import { Recommended,filters } from "@/constants/constants";
+import { Recommended, filters } from "@/constants/constants";
 import Spinner from "../ui.elements/Spinner";
 
 const ProductsSection = () => {
@@ -31,7 +31,7 @@ const ProductsSection = () => {
             } else if (window.innerWidth < 1024) {
                 setItemCount('none')
                 newGrid = 'repeat(3, 1fr)';
-            }else{
+            } else {
                 setItemCount('block')
             }
 
@@ -39,13 +39,13 @@ const ProductsSection = () => {
             if (showFilter) {
                 if (window.innerWidth < 768) {
                     newGrid = 'repeat(2, 1fr)';
-                setItemCount('none')
+                    setItemCount('none')
                 } else if (window.innerWidth < 1024) {
-                setItemCount('none')
+                    setItemCount('none')
                     newGrid = 'repeat(2, 1fr)';
                 } else {
                     newGrid = 'repeat(3, 1fr)';
-                setItemCount('block')
+                    setItemCount('block')
 
                 }
             }
@@ -58,7 +58,7 @@ const ProductsSection = () => {
         handleResize();
 
         return () => window.removeEventListener('resize', handleResize);
-    }, [showFilter]); 
+    }, [showFilter]);
 
     const productSectionStyle = {
         display: 'grid',
@@ -70,18 +70,18 @@ const ProductsSection = () => {
     const toggleFilter = () => {
         setShowFilter(!showFilter);
     };
-    const handleRecommend=()=>{
+    const handleRecommend = () => {
         setShowRecommend(!showRecommend)
     }
 
-   
 
-   
+
+
     return (
         <div className="outerDiv">
             <div className="header-section">
                 <div className="header-inner-div">
-                    <p style={{display:`${itemCount}`}}>3425 Items</p>
+                    <p style={{ display: `${itemCount}` }}>3425 Items</p>
                     <p className="hide-filter-text" onClick={toggleFilter}>
                         <span>
                             <svg
@@ -95,7 +95,7 @@ const ProductsSection = () => {
                                     stroke="#292D32"
                                     strokeMiterlimit="10"
                                     strokeLinecap="round"
-                                    strokeLinejoin="round"/>
+                                    strokeLinejoin="round" />
                             </svg>
                         </span>
                         {showFilter ? "HIDE FILTER" : "SHOW FILTER"}
@@ -104,29 +104,29 @@ const ProductsSection = () => {
                 <div>
                     <div className="recomended_div">
                         <p onClick={handleRecommend}>RECOMMENDED <span><svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M2.72125 6.00017L7.06792 10.3468C7.58125 10.8602 8.42125 10.8602 8.93458 10.3468L13.2813 6.00018"
-                                        stroke="#292D32"
-                                        strokeMiterlimit="10"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"/>
-                                </svg></span> </p>
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.72125 6.00017L7.06792 10.3468C7.58125 10.8602 8.42125 10.8602 8.93458 10.3468L13.2813 6.00018"
+                                stroke="#292D32"
+                                strokeMiterlimit="10"
+                                strokeLinecap="round"
+                                strokeLinejoin="round" />
+                        </svg></span> </p>
                     </div>
-                   {showRecommend ?
-                   <div className="recommended" >
-                        <ul>
-                            {Recommended.map((link,index)=>(
-                               <li style={{ fontWeight: index === 0? 'bold' : 'normal' }} key={index}>
-                            {link.title}
-                           </li>
-                            ))}
-                        </ul>
-                    </div>:""}
+                    {showRecommend ?
+                        <div className="recommended" >
+                            <ul>
+                                {Recommended.map((link, index) => (
+                                    <li style={{ fontWeight: index === 0 ? 'bold' : 'normal' }} key={index}>
+                                        {link.title}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div> : ""}
                 </div>
             </div>
             <div className="container">
@@ -137,7 +137,7 @@ const ProductsSection = () => {
                                 <input type="checkbox" id="checkbox" />
                                 <label for="checkbox">Customizble</label>
                             </div>
-                            {filters.map((filter,index) => (
+                            {filters.map((filter, index) => (
                                 <Filter key={index} filter={filter}
                                 />
                             ))}
@@ -145,15 +145,19 @@ const ProductsSection = () => {
                     )}
                 </div>
                 <div
-                    className={`right-section ${showFilter ? "show-filter" : "" }`}
+                    className={`right-section ${showFilter ? "show-filter" : ""}`}
                     style={{ width: showFilter ? "80%" : "100%" }}
                 >
                     {
-                        products ? (<div  style={productSectionStyle}>
+                        products ? (<div style={productSectionStyle}>
                             {products?.map((prd, index) => (
-                                <ProductCard key={index} product={prd}/>
+                                <ProductCard key={index} product={prd} />
                             ))}
-                        </div>) : (<Spinner />)
+                        </div>) : (<div style={productSectionStyle}>
+                            {[1, 2, 3, 4].map((_, index) => (
+                                <Spinner key={index} />
+                            ))}
+                        </div>)
                     }
                 </div>
             </div>

@@ -142,14 +142,12 @@ row-gap: 15px;
         padding-top: 0%;
         border-bottom: #fff 1px solid;
     }
-    /* .topFooter-left{
-        /* margin-top:-100px ; */
-    /* } */ */
+  
     .topFooter ,.bottomFooter{
         display: flex;
         flex-direction: column;
         padding: 10px 50px;
-        /* justify-content:cene; */
+
         align-items: start;
         border-bottom: none;
     }
@@ -241,7 +239,7 @@ row-gap: 15px;
         display: flex;
         flex-direction: column;
         padding: 10px 50px;
-        /* justify-content:cene; */
+
         align-items: start;
         border-bottom: none;
     }

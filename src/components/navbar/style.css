@@ -98,7 +98,7 @@ select {
 }
 
 select::after {
-    content: '\25BC';
+    content: '25BC';
     position: absolute;
     top: 50%;
     right: 10px;
