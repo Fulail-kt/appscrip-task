@@ -4,7 +4,7 @@ This project is a Next.js application designed using Manual CSS. It displays som
 
 ## Live Link
 
-Check out the live demo [here](https://apscrip1.vercel.app).
+Check out the live demo [here](https://appscrip1.vercel.app/).
 
 ## Technologies Used
 
